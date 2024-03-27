@@ -33,10 +33,6 @@ public class Elevator {
     }
 
     public void moveElevator() {
-        // Implement logic to determine next floor based on requests and current direction
-        // This is a simplified example that prioritizes up requests over down requests
-        // and moves up until no more up requests, then down until no more down requests.
-
         if (hasUpRequests()) {
             for (int floor = currentFloor; floor <= maxFloor; floor++) {
                 if (upRequests[floor]) {
