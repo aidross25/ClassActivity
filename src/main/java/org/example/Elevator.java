@@ -22,4 +22,8 @@ public class Elevator {
     public int currentFloor(){
         return floors[currentFloor].getFloorNumber();
     }
+
+    public void move(int floorDestination){
+        currentFloor = floorDestination;
+    }
 }
