@@ -10,4 +10,4 @@ public static void main(String[] args) {
         elevator.requestFloor(1, false); // Request 1st floor going down (from floor 8)
 
         elevator.moveElevator(); // Move the elevator again
-        }
+}
