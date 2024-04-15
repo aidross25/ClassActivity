@@ -42,7 +42,7 @@ public void resetUpButton() {
 public void resetDownButton() {
     downButton.reset();
 }
-private int getFloorNumber() {
+public int getFloorNumber() {
     return floorNumber;
 }
 
