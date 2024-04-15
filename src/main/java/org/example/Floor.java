@@ -8,7 +8,7 @@ private Button upButton, downButton;
 public Floor(int fN) {
     floorNumber = fN;
     upButton = new Button();
-    downbutton = new Button();
+    downButton = new Button();
 }
 //getters and setters
 public Button getUpButton() {
