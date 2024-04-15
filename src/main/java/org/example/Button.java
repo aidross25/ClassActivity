@@ -6,7 +6,7 @@ public class Button {
 
     public Button(){
         pressed = false;
-        
+        floorNumber = -1;
     }
     public Button(int floor){
         this.floorNumber = floor;
