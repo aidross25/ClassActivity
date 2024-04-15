@@ -5,7 +5,7 @@ private int floorNumber;
 private Button upButton, downButton;
 
 
-public Floor(int fN, Button up, Button down) {
+public Floor(int fN) {
     floorNumber = fN;
     upButton = new Button();
     downbutton = new Button();
