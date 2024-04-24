@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Canvas Game</title>
+<style>
+    canvas {
+        border: 1px solid black;
+        display: none; /* Initially hide the canvas */
+    }
+    #infoPanel {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+<label for="playerName">Enter your name:</label>
+<input type="text" id="playerName"><br><br>
+<label for="topic">Choose a topic (Coding, Network, Careers):</label>
+<select id="topic">
+  <option value="Coding">Coding</option>
+  <option value="Network">Network</option>
+  <option value="Careers">Careers</option>
+</select><br><br>
+<button id="startButton" disabled>Start Game</button>
+<canvas id="gameCanvas"></canvas>
+<div id="infoPanel"></div>
+<script src="game.js"></script>
+</body>
+</html>
