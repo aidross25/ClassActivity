@@ -1,15 +1,18 @@
 package org.example;
 
-public class Floor {
+public class Floor{
 private int floorNumber;
 private Button upButton, downButton;
+private Elevator e;
 
 
-public Floor(int fN) {
+public Floor(int fN, Elevator e) {
     floorNumber = fN;
     upButton = new Button();
     downButton = new Button();
+    this.e = e;
 }
+
 //getters and setters
 public Button getUpButton() {
     return upButton;
@@ -28,11 +31,15 @@ public boolean isDownButtonPressed() {
 }
 
 public void pressUpButton() {
+    System.out.println("Button illuminated");
     upButton.press();
+    e.callElevator(floorNumber);
+    System.out.println("Button deluminated");
 }
 
 public void pressDownButton() {
     downButton.press();
+    e.callElevator(floorNumber);
 }
 
 public void resetUpButton() {
@@ -45,8 +52,5 @@ public void resetDownButton() {
 public int getFloorNumber() {
     return floorNumber;
 }
-
-
-
 
 }
