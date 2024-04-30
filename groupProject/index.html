@@ -1,34 +1,66 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Canvas Game</title>
-<style>
-    canvas {
-        border: 1px solid black;
-        display: none; /* Initially hide the canvas */
-    }
-    #infoPanel {
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #f9f9f9;
-    }
-</style>
-</head>
-<body>
-<label for="playerName">Enter your name:</label>
-<input type="text" id="playerName"><br><br>
-<label for="topic">Choose a topic (Coding, Network, Careers):</label>
-<select id="topic">
-  <option value="Coding">Coding</option>
-  <option value="Network">Network</option>
-  <option value="Careers">Careers</option>
-</select><br><br>
-<button id="startButton" disabled>Start Game</button>
-<canvas id="gameCanvas"></canvas>
-<div id="infoPanel"></div>
-<script src="game.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS360 Game Project</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <p id="scriptCheck">This page requires JavaScript to work. Please enable JavaScript and reload this page.</p>
+            <section id="introContainer">
+                <h2>Welcome new player!</h2>
+                <form>
+                    Enter your name: <input id="usernameIn" type="text"><br>
+                </form>
+                
+                <h3>Select a Topic</h3>
+                <input type="radio" name="topic" value="Coding" id="codingRad" checked> <label for="codingRad">Coding</label><br>
+                <input type="radio" name="topic" value="Careers" id="careersRad"> <label for="careersRad">Careers</label><br>
+                <input type="radio" name="topic" value="Networks" id="networkRad"> <label for="networkRad">Network</label><br>
+                <button id="startGameBtn">Start Game</button>
+            </section>
+
+            <section id="canvasContainer">
+                <h3 id="username"></h3> <h3 id="coins"></h3>
+                <p id="instructions">Click on houses marked with a red exclaimation point to learn more about your selected topic! After clicking all houses, you will have a chance to test your new knowledge!</p>
+                <p id="selectedTopic"></p>
+                <canvas id="gameCanvas" width="600" height="400" style="border:1px solid #000000;" useMap="#test"></canvas>
+                <div id="quizMe">
+                    <p>You have viewed all the information on this topic!</p>
+                    <p>Click the button to test your knowledge!</p>
+                    <button id="quizBtn">Take Quiz</button>
+                </div>
+                <h3>--- Debug ---</h3>
+                <p id="debug">Mouse X in Canvas: <br>Mouse Y in Canvas: </p>
+                <p id="debug2">Clicked Mouse X: <br>Clicked Mouse Y: </p>
+                <p id="debug3">Clicked House: </p>
+                <p id="debug4">Clicked Info House: </p>
+            </section>
+
+            <section id="infoContainer">
+                <h2 id="infoTitle"></h2>
+                <p id="infoContent"></p>
+                <button id="returnBtn">Got it!</button>
+            </section>
+
+            <section id="quizContainer">
+                <p id="question"></p>
+                <input type="radio" name="quiz" value="0" id="c1Rad" checked> <label id="choice1"></label><br>
+                <input type="radio" name="quiz" value="1" id="c2Rad"> <label id="choice2"></label><br>
+                <input type="radio" name="quiz" value="2" id="c3Rad"> <label id="choice3"></label><br>
+                <input type="radio" name="quiz" value="3" id="c4Rad"> <label id="choice4"></label><br>
+                <button id="quizCheckBtn">Check Answer</button>
+            </section>
+
+            <section id="endContainer">
+                <p id="endMessage"></p>
+                <button id="retryBtn">Retry</button>
+                <button id="restartBtn">Select New Topic</button>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
